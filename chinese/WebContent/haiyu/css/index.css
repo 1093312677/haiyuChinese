@@ -1,0 +1,172 @@
+@keyframes load{50%{-webkit-transform:scale(1.2,1.2); -ms-transform:scale(1.2,1.2); transform:scale(1.2,1.2); } 100%{-webkit-transform:scale(1,1); -ms-transform:scale(1,1); transform:scale(1,1); } }
+#loading>img{-webkit-animation:load 3s ease infinite; }
+@media (max-width: 1000px){#loading{display: none; } }
+.body{height: 100vh; overflow: hidden; }
+
+/*视频滚动区===================================*/
+.roll{width: 100%; height: auto; overflow: hidden; position: relative; }
+#img-roll{height: 100%; }
+#img-roll li{float: left; }
+.roll .contorl-btn{position: absolute; bottom: 20px; width: 100px; left: 50%; margin-left: -50px; display: flex; justify-content: space-between; text-align: center; }
+.roll .contorl-btn li{display: inline-block; width: 10px; height: 10px; }
+.roll .contorl-btn li a{display: block; width: 100%; height: 100%; border-radius: 50%; background: blue; }
+.roll .contorl-btn li a:hover{background: #f00; }
+.juanzhan{margin: 25px 15px 0px; height: 25px; background: url(../images/img1_03.png); background-position: 50% 50%; background-size: cover; }
+.article{margin: 0 33px 0; background: #fff; padding-top: 20px; }
+.pic{background: url(../images/banner3.jpg); }
+
+ /*主页合作机构================================*/
+.art-hezuo{width: 100%; }
+.hz{height: 110px; padding-bottom: 20px; margin-bottom: 10px; border-bottom: 1px dotted #ccc }
+.hz-img{width: 30%; height: 100%; float: left; border-right: 1px solid #eee; }
+.hz-img img{width: 50%; display: block; margin-left: 5%; margin-top: 10px; float: left; }
+.hz-img .hz-caption{width: 45%; float: left; padding-top: 20px; text-align: center; }
+.hz-img .hz-caption p{font-size: 16px; color: #b76d22; }
+.hz-img .hz-caption a{display: block; background: #b76d22; color: #eee; border-radius: 3px; padding: 0 10px; height: 18px; line-height: 15px; width: 30px; margin: 0 auto; margin-top: 10px; }
+.hz-content{width: 65%; float: left; height: 100px; overflow: hidden; padding-top: 10px; }
+.hz-content p{line-height: 20px; padding-left: 20px; }
+.art-about{width: 100%; height: 300px; display: flex; justify-content: space-around; }
+.art-about .abt{width: 30%; border: 3px solid #9a1b21; margin-top: 20px; border-radius: 10px; overflow: hidden; }
+.art-about .abt .h4{display: block; height: 40px; line-height: 40px; background: #9a1b21; text-align: center; font-size: 16px; color: #fff; }
+.art-about .abt .abt-p{height: 234px; }
+.art-about .abt .p1{background: url(../images/art-about1.jpg); background-size: cover; background-position: 50% 50%; }
+.art-about .abt .p2{background: url(../images/art-about2.jpg); background-size: cover; background-position: 50% 50%; }
+.art-about .abt .p3{background: url(../images/art-about3.jpg); background-size: cover; background-position: 50% 50%; }
+.art-about .abt .p{padding: 0 7px; padding-top: 7px; padding-bottom: 7px; background: rgba(255,255,255,.5); }
+.art-about .abt p{height: 220px; overflow: hidden; line-height: 20px; text-indent: 2em; color: #000; }
+
+/*vedio视频区域样式============================*/
+.vedio{width: 660px; float: left; margin-bottom: 30px; overflow: hidden; position: relative; border-right: 1px solid #eee; }
+.vedio h2{float: left; text-indent: 10px; line-height: 34px; margin-top: 8px; background: #eee; color: #9a1b21; overflow: hidden; white-space: nowrap; }
+.vedio a.more{float: left; text-indent: 20px; margin-top: 8px; padding-right: 30px; background: url(../images/more_07.png) no-repeat 58px 11px; font-size: 16px; color: #666; overflow: hidden; white-space: nowrap; height: 34px; line-height: 34px; border-top-right-radius: 17px; border-bottom-right-radius: 17px; background-color: #eee; }
+.vedio .more:hover{color: #9a1b21; }
+.module-video .video-wrap, .module-video .video-wrap-outer {width: 100%; height: 480px; background: #000; position: relative; }
+.module-video .video-wrap {overflow: hidden; zoom: 1; }
+.vedio-box{width: 100%; }
+.vedio-box .vedio-b{width:630px; margin-left: 15px; height: 280px; overflow: hidden; }
+.vedio-box .item{display: inline-block; width: 300px; height: auto; margin-left: 17px; margin-bottom: 20px; background-color: #eee; border-top-right-radius: 20px; }
+.vedio h3{text-indent: 40px; line-height: 40px; color: #333; font-size: 14px; background: url(../images/yun_03.png) no-repeat left center; background-color: #fff; }
+.zhaopin h3{text-indent: 40px; line-height: 40px; color: #333; font-size: 14px; background: url(../images/yun_03.png) no-repeat left center; background-color: #fff; }
+.contact h3{text-indent: 40px; line-height: 40px; color: #333; font-size: 16px; background: url(../images/yun_03.png) no-repeat left center; background-color: #fff; }
+.vedio-box h3{text-indent: 40px; line-height: 40px; color: #333; font-size: 14px; margin: 0; background: url(../images/yun_03.png) no-repeat left center; background-color: #fff; }
+.vedio-box .item .img{position: relative; height: 160px; overflow: hidden; }
+.vedio-box .item .img a{display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,.5); opacity: 0; transition: opacity .2s; -webkit-transition: opacity .2s; -ms-transition: opacity .2s; -o-transition: opacity .2s; -moz-transition: opacity .2s; }
+.vedio-box .item .img img{-webkit-transition: transform .2s; -ms-transition: transform .2s; -o-transition: transform .2s; -moz-transition: transform .2s; }
+.vedio-box .item .img a img{display: block; width: 40px; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%); }
+.vedio-box .item .img:hover a{opacity: 1; }
+.vedio-box .item>p{margin: 10px 0 0 0; line-height: 20px; color: #333; text-indent: 5px; }
+.vedio-box .item div p{line-height: 30px; color: #333; text-indent: 5px; margin: 0; }
+.vedio-box .item p.lx{float: left; }
+.vedio-box .item p.zj{float: right; margin-right: 5px; }
+
+/*侧边栏=====================================*/
+.side-right{width: 27%; float: right; }
+.side-right a{display: block; }
+.caption{height: 40px; margin-bottom: 5px; }
+.caption h3{float: left; background: url(../images/list_03.png) no-repeat left center; text-indent: 40px; line-height: 40px; margin-left: -10px; color: #9a1b21; border-top: 1px solid #eee; width: 60%; overflow: hidden; white-space: nowrap; }
+.caption a{float: right; margin-right: 10px; color: #666; font-size: 12px; margin-top: 15px; width: 66px; }
+.caption a:hover{color: #9a1b21; }
+.side{margin: 20px 20px 0 0; height: 60px; padding-right: 78px; border-top-left-radius: 20px; border-bottom-right-radius: 20px; }
+.side.side1{background: url(../images/icon3.png) no-repeat right center ; background-color: #eee; }
+.side.side2{background: url(../images/icon4.png) no-repeat right center ; background-color: #eee; }
+.side.side3{background: url(../images/tea_03.png) no-repeat right center ; background-color: #eee; }
+.side p{white-space: nowrap; overflow: hidden; text-indent: 10px; color: #666; }
+.side p:nth-child(1){line-height: 35px; color: #b76d22; font-size: 16px; }
+
+/*教室档案===================================**/
+.teacher-pic{position: relative; margin-right: 10px; margin-bottom: 30px; height: 115px; font-size: 0; }
+.teacher{width: 190px; height: 70px; padding: 15px 0 25px; overflow: hidden; margin: 0 auto; }
+.teacher ul{height: 90px; font-size: 0; }
+.teacher ul li{width: 95px; height: 105px; float: left; }
+.teacher ul li a .pic{display:block; margin: 0 auto; width: 64px; height: 64px; overflow: hidden; border-radius: 50%; border: 3px solid #444; transition: transform .3s; -webkit-transition: transform .3s; -o-transition: transform .3s; -ms-transition: transform .3s; -moz-transition: transform .3s; }
+.teacher ul li button{width: 50px; text-align: center; display: block; height: 18px; color: #444; background: #fff; border: 1px solid #ccc; font-size: 10px; margin: 0 auto; margin-top: 5px; border-radius: 3px; transition: transform .3s; -webkit-transition: transform .3s; -o-transition: transform .3s; -ms-transition: transform .3s; -moz-transition: transform .3s; }
+.teacher ul li a:hover .pic{transform: scale(1.1,1.1); -webkit-transform: scale(1.1,1.1); }
+.teacher ul li a img{width: 100%; margin-top: -10px; }
+.teacher .th-btn{width: 20px; height: 50px; position: absolute; cursor: pointer; }
+.teacher .th-btn.l-btn{left: 0px; top: 25px; background: url(../images/icon-btn_05.png) no-repeat center center; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-right: none; }
+.teacher .th-btn.r-btn{right: 0px; top: 25px; background: url(../images/icon-btn_03.png) no-repeat center center; border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
+.teacher .th-btn:hover{background-color: #ccc; }
+/*.teacher div{display: inline-block; width: 100px; cursor: pointer; transition: transform .2s; } .teacher div:hover{transform: scale(1.1,1.1); -webkit-transform:scale(1.1,1.1); } .teacher .head-img{width: 54px; height: 54px; border: 3px solid #333; border-radius: 50%; overflow: hidden; } .teacher .head-img>img{margin-top: -10px; } .teacher .head-img.img1{background: url(../images/th1.jpg); background-size: cover; background-position: 50% 50%; } .teacher .head-img.img2{background: url(../images/th2.jpg); background-size: cover; background-position: 50% 50%; }*/
+
+/*//历史观看记录==============================*/
+.history{margin-bottom: 30px; overflow: hidden; width: 100%; }
+.hisMore{height: 75px; }
+.history p{width: 65%; float: left; color: #555; line-height: 25px; overflow: hidden; white-space: nowrap; }
+.history a:hover{background: #fff; }
+.history a:hover p{color: #9a1b21; }
+.history span{display: inline-block; float: right; color: #666; margin-right: 10px; font-size: 10px; line-height: 25px; }
+.contactus p{line-height: 20px; }
+
+/*机构概况====================================*/
+.jigou p{line-height: 20px; padding-left: 20px; }
+.jigou h3{margin-left: 5px; line-height: 40px; border-bottom: 2px solid #ccc; }
+.jigou p.guwen{margin-bottom: 20px; }
+.jigou img{max-width: 90%; margin-left: 20px; margin-top: 20px; margin-bottom: 30px; }
+table{width: 95%; margin-left: 15px; border: 1px solid #ccc; }
+table tr td{border: 1px solid #ccc; height: 30px; line-height: 30px; width: 100px; text-align: center; }
+
+/*视频资源====================================*/
+.play{width: 100%; height: 600px; }
+
+/*汉语机构====================================*/
+.hezuo .items{padding: 10px 20px; margin-bottom: 30px; overflow: hidden; position: relative; }
+.hezuo h3{border-top: 1px solid #ccc; }
+.items-height{height: 190px; }
+.hezuo-logo{width: 80px; height:80px; float: left; overflow: hidden; }
+.hezuo .items p{line-height: 23px; margin-left: 100px; }
+.items .content{margin-bottom: 20px; line-height: 23px; }
+.items .btn{width: 100px; height: 23px; line-height: 23px; position: absolute; right: 10px; bottom: 0; background:#fff; color: #9a1b21; border: none; cursor: pointer; outline: none; font-size: 12px; }
+.hezuo-logo img{width: 100%; margin: 0 auto; }
+.hezuo .content .img{margin-left: 100px; margin-top: 10px; margin-bottom: 20px; }
+
+/*//联系我们===================================*/
+.contact p{line-height: 25px; margin-left: 20px; font-size: 14px; }
+.contact h3{margin-left: 5px; line-height: 40px; }
+.contact p.con-haiyu{color: #222; font-weight: bold; margin-bottom: 10px; font-size: 16px; }
+.contact img{margin-bottom: 30px; }
+
+/*传统文化=====================================*/
+.xiangqi{padding: 0 15px 0 10px; margin-bottom: 30px; }
+.xiangqi h3{line-height: 40px; margin-bottom: 10px; border-bottom: 1px solid #ddd; }
+.xiangqi img{float: left; margin-right: 20px; margin-bottom: 10px; }
+.xiangqi p{font-size: 12px; line-height: 25px; }
+.trandition-active{background-color: #c00; }
+
+/*iframe窗口页面部分===========================*/
+.iframe{width: 100%; height: 860px; }
+.iframe iframe{width: 100%; height: 100%; border: none; }
+#file>a>p{width: 100%; }
+
+/*vedio页面分页按钮===========================*/
+.page{margin: 10px 0 50px; display: flex; text-align: center; flex-wrap: nowrap; justify-content: center; font-size: 12px; }
+.page>a{display: inline-block; padding: 0 20px; border: 1px solid #ccc; height: 28px; line-height: 28px; border-radius: 5px; margin-right: 20px; color: #444; background: #eee; }
+.page>span{line-height: 28px; }
+.page>a:hover{background: #9abfe2; border: 1px solid #9abfe2; color: #222; }
+.page-input{height: 28px; line-height: 28px; border: 1px solid #ccc; margin-left: 10px; }
+.page-input>input{width: 50px; height: 100%; border: none; text-indent: 5px; font-size: 12px; }
+.page-input>a{width: 40px; height: 100%; float: right; background: #ccc; color: #333; }
+
+/*招聘页面=====================================*/
+.zhaopin h3{margin-left: 5px; border-bottom: solid 2px #ccc; }
+ .zhaopin p{line-height: 25px; padding-left: 20px; padding-right: 10px; }
+
+/*个人信息页面=================================*/
+.setup{float: left; width: 250px; float: left; height: 800px; background: #eee; }
+.setup ul li{border-top: 1px dotted #ccc; }
+.setup ul li a{display: block; height: 40px; line-height: 40px; padding-left: 50px; color: #000; font-size: 14px; }
+.setup ul li a.shezhi{font-weight: bold; height: 50px; line-height: 50px; font-size: 18px; padding-left: 30px; background: #fff; }
+.setup ul li:hover{background: #fff; }
+.setup ul li a:hover{font-weight: bold; }
+.setup ul li ul{display: none; background: #eee; }
+.setup ul li ul li{padding-left: 20px; }
+.set-iframe{margin-top: 20px; width: 730px; float: left; margin-left: 10px; height: 800px; }
+.set-iframe iframe{width: 100%; height: 100%; border: none; }
+
+/*教师简介======================================*/
+.Teacher{width: 100%; padding: 20px 0; border-top: 1px solid #ccc; }
+.l-img{width: 25%; float: left; height: 100%; }
+.l-img img{width: 70%; display: block; margin: 0 auto; }
+.r-content{width: 72%; float: right; /*background: #ddd;*/ height: 100%; }
+
+/*关于嗨语---机构介绍*/
+#about-p p{margin-left: 10px; }

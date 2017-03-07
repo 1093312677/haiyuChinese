@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.multipart.maxSize" value="550000000"/>
+	<package name="car" namespace="/" extends="struts-default">
+		<action name="*_*" class="com.action.{1}Action" method="{2}">
+			<result name="login_success" >/background.jsp</result>
+			<result name="view_one_infor">/page/viewOneInfor.jsp</result>
+			<result name="view_video">/page/viewVideo.jsp</result>
+			
+			<result name="view_video_mainPage">/haiyu/video.jsp</result>
+			
+			<result name="view_article">/page/viewArticle.jsp</result>
+			<result name="view_article_mainPage">/haiyu/teach-file.jsp</result>
+			<result name="view_accounts">/page/viewAccounts.jsp</result>
+			<result name="success">/page/message/success.jsp</result>
+			<result name="failed">/page/message/failed.jsp</result>
+			
+			<result name="view_article_detials">/page/viewArticleDetials.jsp</result>
+			<result name="update_article">/page/updateArticle.jsp</result>
+			<result name="play_video">/haiyu/play.jsp</result>
+			<result name="play_video_main">/page/playVideo.jsp</result>
+			
+			<result name="view_history">/page/viewHistory.jsp</result>
+			<result name="login_success_other" type="chain">Main_mainPage</result>
+			<result name="view_video_audit">/page/video/viewVideoAudit.jsp</result>
+			<result name="view_article_audit">/page/article/viewArticleAudit.jsp</result>
+			
+			<result name="view_notify">/backMain.jsp</result>
+			
+			<result name="view_institution">/page/institution/viewInstitution.jsp</result>
+			<result name="view_one_institution">/page/institution/updateInstitution.jsp</result>
+			<result name="view_institution_main_page">/haiyu/info-jigou.jsp</result>
+			
+			<result name="view_one_account">/page/account/viewAccount.jsp</result>
+			
+			<result name="main_page">/haiyu/index.jsp</result>
+			
+			<result name="view_file">/page/article/viewFile.jsp</result>
+			<result name="view_file_audit">/page/article/viewTeachAudit.jsp</result>
+			
+			<result name="view_teacher">/haiyu/about-teacher.jsp</result>
+			<result name="view_teacher_bg">/haiyu/about-teacher.jsp</result>
+			
+			<result name="view_activitys">/haiyu/info-activity.jsp</result>
+			<result name="view_activity">/page/activity/viewActivityDetials.jsp</result>
+			<result name="view_activity_bg">/page/activity/viewActivity.jsp</result>
+			<result name="view_teacher_bg">/page/teacher/viewTeacherBg.jsp</result>
+			
+			<!-- 
+			<result name="get_account2_success" type="chain">Account_getAccount</result>
+			<result name="login_success" type="chain">Main_mainNotify</result>
+			 -->
+		</action>
+	</package>
+	
+</struts>    

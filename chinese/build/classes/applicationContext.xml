@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/task   
+	http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+	
+	<!-- spring Timer -->
+<!--  spring3.0之后的新用法，配置有变化，而且比以前简单了很多 
+  <bean id="updateDataTime" class="com.action.AccountAction"></bean>--> 
+  <!-- 定义调用对象和调用对象的方法    
+  <task:scheduled-tasks>-->
+    <!-- 这里表示的是每天23:59:59调用一次 
+    <task:scheduled ref="updateDataTime" method="updateDataTime" cron="0 */30 * * * ?" />
+  </task:scheduled-tasks> -->
+	
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/chinese?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="wn15181647378"></property>
+		
+		<property name="testOnBorrow" value="true"></property>
+	   <property name="testOnReturn" value="true"></property>
+	   <property name="testWhileIdle" value="true"></property>
+	   <property name="validationQuery" value="SELECT 1"></property>
+	   <property name="timeBetweenEvictionRunsMillis" value="7200000"></property>
+	   <property name="minEvictableIdleTimeMillis" value="7200000"></property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.connection.characterEncoding">utf-8</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.autoReconnect">true</prop>  
+			</props>
+		</property>
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.entity</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+<!-- AccountDaoImpl -->
+	<bean id="daoImpl" class="com.DaoImpl.DaoImpl" scope="prototype">
+		<property name="sessionFactory" ref="sessionFactory" ></property>
+	</bean>
+<!-- AccountService -->
+	<bean id="accountService" class="com.Service.AccountService" scope="prototype">
+		<property name="daoImpl" ref="daoImpl" ></property>
+	</bean>
+<!-- AccountAction -->
+	<bean id="accountAction" class="com.action.AccountAction" scope="prototype">
+		<property name="accountService" ref="accountService" ></property>
+	</bean>
+<!-- MainAction -->
+	<bean id="mainAction" class="com.action.MainAction" scope="prototype">
+		<property name="accountService" ref="accountService" ></property>
+	</bean>
+<!-- TeachAction -->
+	<bean id="teachAction" class="com.action.TeachAction">
+	    <property name="accountService" ref="accountService"></property>
+	</bean>
+<!-- TeachAction -->
+	<bean id="activityAction" class="com.action.ActivityAction">
+	    <property name="accountService" ref="accountService"></property>
+	</bean>	
+</beans>
